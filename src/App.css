@@ -1,0 +1,95 @@
+:root {
+  --CL-primary-400: #205f92;
+  --CL-primary-600: #205f92;
+  --CL-primary-gray: #ebeef2;
+  --CL-primary-gray-two: #6d7580;
+  --CL-primary-blue: #545d69;
+  --CL-primary-blue-two: #2b3a4b;
+  --CL-neutral-white: #fff;
+  --CL-neutral-black: #000;
+  --CL-neutral-light: #eef1fa;
+  --CL-neutral-light-two: #a3aed0;
+  --FF-poppins: 'Poppins', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 85%;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--FF-poppins);
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+label,
+button,
+textarea {
+  font-family: var(--FF-poppins);
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Background Colors */
+
+.bg-primary-400 {
+  background-color: var(--CL-primary-400);
+}
+
+.bg-primary-600 {
+  background-color: var(--CL-primary-600);
+}
+
+/* Containers */
+
+.container {
+  /* max-width: 1600px; */
+  margin: 0 auto;
+}
+
+/* Text */
+
+.text-center {
+  text-align: center;
+}
+
+/* Content */
+.content {
+  padding: 2em;
+  max-width: 1600px;
+}
+
+@media (min-width: 768px) {
+  .App > .container {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    justify-content: left;
+  }
+
+  .content {
+    padding: 3em;
+  }
+
+  .grid-system {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    gap: 2em;
+  }
+}

@@ -1,0 +1,258 @@
+/* Sidebar */
+.sidebar {
+  width: 230px;
+  box-shadow: 0 0 5px 3px var(--CL-neutral-light);
+  padding: 2em 0;
+  transition: width 0.2s ease-in-out;
+  will-change: width;
+  height: 100vh;
+}
+
+.sidebar.min {
+  width: 90px;
+}
+
+/* Sidebar Layout */
+.sidebar-container {
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+/* Sidebar Header */
+.sidebar-button {
+  position: absolute;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1.75rem;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  color: var(--CL-neutral-white);
+  right: -1.35em;
+  z-index: 100;
+  width: 45px;
+  height: 45px;
+  border-radius: 10rem;
+  background-color: var(--CL-primary-blue);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  transition: 0.15s;
+}
+
+.sidebar-button:hover {
+  transform: scale(1.2);
+  background-color: var(--CL-primary-400);
+}
+
+.sidebar-button:active {
+  transform: scale(1);
+}
+
+.sidebar.min .sidebar-button {
+  position: unset;
+}
+
+.sidebar-button.mobile {
+  display: none;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  position: relative;
+}
+
+.sidebar.min .sidebar-header {
+  justify-content: center;
+}
+
+.sidebar-logo {
+  width: 3.5em;
+}
+
+.sidebar.min .sidebar-logo {
+  display: none;
+}
+
+/* Sidebar Title and Subtitle */
+.sidebar-title {
+  margin: 0;
+  font-size: 1.25rem;
+  background: -webkit-linear-gradient(-135deg, var(--CL-primary-400), var(--CL-primary-600));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 0.25s;
+}
+
+.sidebar.min .sidebar-title {
+  display: none;
+}
+
+.sidebar-subtitle {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.sidebar.min .sidebar-subtitle {
+  display: none;
+}
+
+/* Sidebar Content */
+.sidebar-content {
+  margin: 2em 0;
+}
+
+/* Sidebar List */
+.sidebar-list {
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+  gap: 0.25em;
+}
+
+/* Sidebar Icons and Items */
+.sidebar-icon {
+  width: 15px;
+}
+
+.sidebar.min .sidebar-icon {
+  font-size: 1.5rem;
+  width: 100%;
+}
+
+.sidebar-item {
+  padding: 0.5em 1em;
+  transition: 0.25s;
+}
+
+.sidebar.min .sidebar-item {
+  padding: 0.5em 0;
+}
+
+.sidebar-item.active {
+  background-color: var(--CL-primary-gray);
+  border-radius: 24px;
+}
+
+.sidebar.min .sidebar-item.active {
+  border-radius: 40px;
+}
+
+/* Sidebar Links */
+.sidebar-link {
+  color: var(--CL-primary-blue);
+  display: block;
+}
+
+.sidebar-link:hover {
+  color: var(--CL-primary-400);
+}
+
+.sidebar.min .sidebar-link {
+  text-align: center;
+}
+
+.sidebar-link > * {
+  font-size: 1rem;
+  transition: 0.15s;
+}
+
+.sidebar-item.active .sidebar-link {
+  color: var(--CL-primary-400);
+}
+
+/* Sidebar Text */
+.sidebar-text {
+  margin: 0 1em;
+}
+
+.sidebar.min .sidebar-text {
+  font-size: 0.75rem;
+  margin: 0.5em;
+}
+
+@media (max-width: 768px) {
+  .sidebar,
+  .sidebar.min {
+    width: 100%;
+    height: 100%;
+  }
+
+  .sidebar-logo {
+    display: block;
+  }
+
+  .sidebar.min .sidebar-logo {
+    display: block;
+  }
+
+  .sidebar-container,
+  .sidebar.min .sidebar-container {
+    margin: 0 2em;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .sidebar-title,
+  .sidebar.min .sidebar-title {
+    display: block;
+  }
+
+  .sidebar-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: 0;
+    bottom: 0;
+    background-color: var(--CL-primary-gray);
+    padding: 2em;
+    z-index: 99;
+  }
+
+  .sidebar-subtitle {
+    margin: 0;
+  }
+
+  .sidebar.min .sidebar-subtitle {
+    display: block;
+  }
+
+  .sidebar.min .sidebar-item {
+    text-align: left;
+    padding: 0.5em 1em;
+  }
+
+  .sidebar.min .sidebar-icon {
+    font-size: unset;
+    width: 15px;
+  }
+
+  .sidebar.min .sidebar-link {
+    text-align: left;
+  }
+
+  .sidebar.min .sidebar-text {
+    font-size: 0.9rem;
+    margin: 0.5em 1em;
+  }
+
+  .sidebar-button {
+    display: none;
+  }
+
+  .sidebar-button.mobile {
+    display: block;
+    right: 1em;
+    top: 1.35em;
+  }
+
+  .sidebar.min .sidebar-button.mobile {
+    position: absolute;
+  }
+
+  .hidden {
+    display: none;
+  }
+}
