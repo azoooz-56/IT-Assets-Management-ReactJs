@@ -7,11 +7,11 @@ export const formatDateForDisplay = (dateString) => {
   const day = `0${date.getDate()}`.slice(-2);
   const month = `0${date.getMonth() + 1}`.slice(-2);
   const year = date.getFullYear();
-  return `${day}-${month}-${year}`; // Format as yyyy-mm-dd for display
+  return `${day}-${month}-${year}`; 
 };
 
 export const convertToInputDateFormat = (dateString) => {
   if (!dateString) return '';
   const [day,month, year,] = dateString.split('-');
-  return `${day}-${month}-${year}`; // Convert to yyyy-mm-dd for input
+  return `${day}-${month}-${year}`; 
 };

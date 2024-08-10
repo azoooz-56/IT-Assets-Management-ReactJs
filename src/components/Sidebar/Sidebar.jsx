@@ -48,7 +48,7 @@ const Sidebar = () => {
       setItems((prevItems) => {
         const newItems = prevItems.map((item) => {
           if (item.ID === link) {
-            return { ...item, isActive: true }; // Activate the selected item
+            return { ...item, isActive: true }; 
           }
 
           return { ...item, isActive: false };
@@ -103,9 +103,7 @@ const Sidebar = () => {
   );
 };
 
-/* eslint-disable */
 const SidebarItem = ({ ID, path, active, icon, text, setLink, setMobile }) => {
-  /* eslint-enable */
   const iconClassName = `sidebar-icon fa-solid fa-${icon}`;
 
   const handleStatus = () => {

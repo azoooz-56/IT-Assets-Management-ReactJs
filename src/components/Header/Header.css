@@ -1,24 +1,24 @@
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Distribute space between items */
+  justify-content: space-between; 
   padding: 10px 20px;
   margin-bottom: 10px;
-  background-color: #f4f4f4; /* Light gray background */
-  border-bottom: 1px solid #ddd; /* Light border for separation */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  background-color: #f4f4f4; 
+  border-bottom: 1px solid #ddd; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
 .header-logo {
-  width: 40px; /* Adjust size as needed */
+  width: 40px; 
   height: auto;
-  margin-left: auto; /* Pushes the logo to the end */
+  margin-left: auto; 
 }
 
 .header-title {
   font-size: 24px;
   margin: 0;
   color: #333;
-  text-align: center; /* Center text alignment */
-  flex-grow: 1; /* Allows the title to take up remaining space */
+  text-align: center; 
+  flex-grow: 1; 
 }
