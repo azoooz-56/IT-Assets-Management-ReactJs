@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import Header from '../../Header/Header';
-import Card from '../../Card/Card';
-import Chart from '../../Chart/Chart';
+import Header from '../../components/Header/Header';
+import Card from '../../components/Card/Card';
+import Chart from '../../components/Chart/Chart';
 import axios from 'axios';
 import './Dashboard.css';
 
@@ -46,18 +46,16 @@ function Dashboard() {
   const statusCounts = getStatusCounts();
   const brandCounts = getBrandCounts();
 
-  // Find the most frequent status and brand
   const mostFrequentStatus = statusCounts.reduce((prev, curr) => (curr.count > prev.count ? curr : prev), { status: 'None', count: 0 });
   const mostFrequentBrand = brandCounts.reduce((prev, curr) => (curr.count > prev.count ? curr : prev), { brand: 'None', count: 0 });
 
-  // Suggestion for the fourth card
-  const suggestion = `Consider adding more detailed analytics or trends based on asset usage or historical data.`;
 
   return (
     <div>
       <Header title="Dashboard" />
-      {loading && <div className="loading-spinner">Loading...</div>} {/* Move loading indicator here */}
-      <div className="card-container">
+      {loading ? <div className="loading-spinner">Loading...</div> : (
+        <>
+              <div className="card-container">
         <Card
           icon="database"
           title="Total Assets"
@@ -73,17 +71,13 @@ function Dashboard() {
           title={`Most Brand: ${mostFrequentBrand.brand}`}
           number={mostFrequentBrand.count}
         />
-        {/* <Card
-          icon="suggestion"
-          title="Suggestion"
-          number={suggestion}
-        /> */}
       </div>
       <div className="grid-system">
         <Chart assets={assetData} />
-        {/* <Leaderboard />
-        <Overview /> */}
       </div>
+        </>
+      )}
+
     </div>
   );
 }

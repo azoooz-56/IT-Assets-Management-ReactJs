@@ -9,7 +9,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 75vh; /* Full viewport height */
+  height: 75vh; 
 }
 
 .loading-spinner::before {
@@ -18,7 +18,7 @@
   width: 50px;
   height: 50px;
   border: 5px solid #f3f3f3;
-  border-top: 5px solid #2196F3; /* Blue */
+  border-top: 5px solid #2196F3; 
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
