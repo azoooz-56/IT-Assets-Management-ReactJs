@@ -87,6 +87,7 @@ function Assets() {
     } catch (error) {
       console.error('Error adding or editing asset:', error);
       enqueueSnackbar('Error adding or editing asset', { variant: 'error' });
+      
     }
   };
 
