@@ -1,20 +1,19 @@
 .chart {
   box-shadow: 0 0 5px 3px var(--CL-neutral-light);
   border-radius: 0.5em;
-  display: flex; /* Use Flexbox to align items horizontally */
-  justify-content: space-between; /* Distribute space between charts */
-  gap: 20px; /* Optional: add space between charts */
+  display: flex; 
+  justify-content: space-between;
+  gap: 20px; 
 }
 
-/* Media query for mobile devices */
 @media (max-width: 768px) {
   .chart {
-    flex-direction: column; /* Stack the charts vertically on smaller screens */
-    gap: 10px; /* Optional: adjust space between charts on smaller screens */
+    flex-direction: column; 
+    gap: 10px; 
   }
 }
 
 .chart-item {
-  flex: 1; /* Allow items to grow and shrink as needed */
-  min-width: 0; /* Ensure the items can shrink to fit smaller screens */
+  flex: 1;
+  min-width: 0; 
 }

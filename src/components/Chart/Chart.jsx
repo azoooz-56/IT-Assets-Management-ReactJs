@@ -9,7 +9,6 @@ function Chart({ assets }) {
 
   useEffect(() => {
     if (assets) {
-      // Calculate brand distribution
       const brandCount = {};
       const statusCounts = {};
 
@@ -23,10 +22,9 @@ function Chart({ assets }) {
 
       setBrandData(Object.entries(brandCount).map(([brand, count]) => ({ name: brand, y: count })));
 
-      // Prepare status data for column chart
       const seriesData = Object.entries(statusCounts).map(([status, assets]) => ({
         name: status,
-        data: [assets.length], // If you have more complex data, you need to adjust this
+        data: [assets.length],
       }));
 
       setStatusSeries(seriesData);
@@ -49,8 +47,8 @@ function Chart({ assets }) {
         data: brandData,
         showInLegend: true,
         dataLabels: {
-          enabled: true, // Enable data labels
-          format: '{point.name}: {point.y}', // Format the data labels
+          enabled: true,
+          format: '{point.name}: {point.y}', 
         },
       },
     ],
@@ -64,7 +62,7 @@ function Chart({ assets }) {
       text: 'Number of Assets by Status',
     },
     xAxis: {
-      categories: ['Status'], // X-axis category (single category since we have multiple series)
+      categories: ['Status'], 
 
     },
     yAxis: {
@@ -90,7 +88,7 @@ function Chart({ assets }) {
     plotOptions: {
       column: {
         dataLabels: {
-          enabled: true, // Enable data labels
+          enabled: true, 
         },
       },
     },
