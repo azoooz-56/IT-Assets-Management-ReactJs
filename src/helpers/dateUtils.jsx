@@ -1,6 +1,4 @@
 
-
-// dateUtils.js
 export const formatDateForDisplay = (dateString) => {
   if (!dateString) return '';
   const date = new Date(dateString);
